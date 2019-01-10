@@ -1,0 +1,56 @@
+<dashboard>
+  <label>2016 presidential election</label>
+  <row>
+    <panel>
+      <html>
+        <h1>Clinton vs Trump</h1>
+        <p>See the full site at <a href="http://elections.splunk4good.com" target="_blank">http://elections.splunk4good.com</a>
+        </p>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <chart>
+        <search ref="schedule_e_timechart"></search>
+        <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.axisX.scale">linear</option>
+        <option name="charting.axisY.scale">linear</option>
+        <option name="charting.axisY2.enabled">1</option>
+        <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart">line</option>
+        <option name="charting.chart.bubbleMaximumSize">50</option>
+        <option name="charting.chart.bubbleMinimumSize">10</option>
+        <option name="charting.chart.bubbleSizeBy">area</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
+        <option name="charting.chart.overlayFields">poll_clinton,poll_trump</option>
+        <option name="charting.chart.showDataLabels">none</option>
+        <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
+        <option name="charting.chart.stackMode">default</option>
+        <option name="charting.chart.style">shiny</option>
+        <option name="charting.drilldown">none</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.layout.splitSeries.allowIndependentYRanges">0</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
+        <option name="charting.legend.placement">right</option>
+        <option name="height">276</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <viz type="viz_halo.halo">
+        <search ref="schedule_e_stats_breakdown"></search>
+        <option name="height">663</option>
+        <option name="viz_halo.halo.auto_transition">never</option>
+        <option name="viz_halo.halo.draggable">on</option>
+        <option name="viz_halo.halo.outer_colors">schemeCategory20c</option>
+        <option name="viz_halo.halo.width">900</option>
+      </viz>
+    </panel>
+  </row>
+</dashboard>
